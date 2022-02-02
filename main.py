@@ -1,8 +1,8 @@
-from PyQt5 import uic, QtWidgets
+from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMessageBox
 import sys
 
-Form, _ = uic.loadUiType("window_main_2.ui")
+from window import Ui_MainWindow
 
 
 def error():
@@ -14,7 +14,7 @@ def error():
     msg.exec_()
 
 
-class Ui(QtWidgets.QMainWindow, Form):
+class Ui(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         super(Ui, self).__init__()
         self.total = 0
